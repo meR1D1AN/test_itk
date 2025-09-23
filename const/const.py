@@ -1,0 +1,5 @@
+COMPLETED_ERROR = "Ошибка: в `completed` должно быть `true` или `false`."
+TITLE_MAX_200 = "Убедитесь, что это значение содержит не более 200 символов."
+TITLE_NULL = "Это поле не может быть пустым."
+TASK_ID_NOT_FOUND = "Нет задачи с таким ID."
+FORMAT_SERIALIZERS = "%Y-%m-%d %H:%M:%S"
