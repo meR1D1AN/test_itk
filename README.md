@@ -47,7 +47,7 @@ docker compose exec app uv run python3 manage.py create_test_data --count 12345
 * пример успешного получения списка всех задач ![img_1.png](image_for_readme/img_1.png)
 
 - Ручка POST на создание задачи ![img_4.png](image_for_readme/img_4.png)
-* пример успешного создания задачи, с возможными ошибами ![img_3.png](image_for_readme/img_3.png)
+* пример успешного создания задачи, с возможными ошибками ![img_3.png](image_for_readme/img_3.png)
 
 - Ручка GET id на получение детальной информации о задаче, необходимо передать ID задачи ![img_5.png](image_for_readme/img_5.png)
 * пример успешного получение детальной информации о задаче, с возможными ошибками ![img_6.png](image_for_readme/img_6.png)
