@@ -28,7 +28,7 @@ cp .env.sample .env
 ```bash
 docker compose up -d --build
 ```
-4. Контейнер автоматически запустится, можно будет зайти в Django админку с помощью данных которые внесли в файл `.env` в поля ADMIN_USERNAME и ADMIN_PASSWORD, в базе уже будет 10000 рандомных задач.
+4. При запуске контейнера в базе будет создан админ, можно будет перейти в админку Django, используя ADMIN_USERNAME и ADMIN_PASSWORD внесённые в файле `.env` и 10000 рандомных задач.
   
 **Команда без передачи аргумента создаёт 10000 задач**
 ```bash
@@ -39,7 +39,7 @@ docker compose exec app uv run python3 manage.py create_test_data
 docker compose exec app uv run python3 manage.py create_test_data --count 12345        
 ```
 5. Ссылка на [Админку](http://localhost/admin).
-6. Сслыка на [Swagger](http://loclahost/api/v1/docs) документацию.
+6. Сслыка на [Swagger](http://localhost/api/v1/docs) документацию.
 
 ---
 ### Ендпоинты
@@ -47,7 +47,7 @@ docker compose exec app uv run python3 manage.py create_test_data --count 12345
 * пример успешного получения списка всех задач ![img_1.png](image_for_readme/img_1.png)
 
 - Ручка POST на создание задачи ![img_4.png](image_for_readme/img_4.png)
-*пример успешного создания задачи и описание возможных ошибок ![img_3.png](image_for_readme/img_3.png)
+* пример успешного создания задачи, с возможными ошибами ![img_3.png](image_for_readme/img_3.png)
 
 - Ручка GET id на получение детальной информации о задаче, необходимо передать ID задачи ![img_5.png](image_for_readme/img_5.png)
 * пример успешного получение детальной информации о задаче, с возможными ошибками ![img_6.png](image_for_readme/img_6.png)
