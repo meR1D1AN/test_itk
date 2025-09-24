@@ -40,4 +40,5 @@ class TaskFilter(FilterSet):
             "description",
             "completed",
             "completed_at",
+            "created_at",
         ]
