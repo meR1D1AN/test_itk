@@ -1,34 +1,34 @@
-from django.db.models import BooleanField, CharField, DateTimeField, Model, TextField
+from django.db import models
 from django.utils import timezone
 
 from const.models import NULLABLE
 
 
-class Task(Model):
+class Task(models.Model):
     """
     Модель задачи.
     """
 
-    title = CharField(
+    title = models.CharField(
         max_length=200,
         verbose_name="Название задачи",
         help_text="Введите название задачи, максимум 200 символов.",
     )
-    description = TextField(
+    description = models.TextField(
         verbose_name="Описание задачи",
         help_text="Введите описание задачи.",
         blank=True,
     )
-    completed = BooleanField(
+    completed = models.BooleanField(
         verbose_name="Статус задачи",
         help_text="Завершена ли задача?",
         default=False,
     )
-    completed_at = DateTimeField(
+    completed_at = models.DateTimeField(
         verbose_name="Дата завершения задачи",
         **NULLABLE,
     )
-    created_at = DateTimeField(
+    created_at = models.DateTimeField(
         verbose_name="Дата создания задачи",
         auto_now_add=True,
     )
